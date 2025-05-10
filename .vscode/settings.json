@@ -6,9 +6,9 @@
       "list.warningForeground": "#9ea5b3f8",
     },
     "files.exclude": {
-      "**/*.freezed.dart": false,
-      "**/objectbox-model.json": false,
-      "**/*.g.dart": false
+      "**/*.freezed.dart": true,
+      "**/objectbox-model.json": true,
+      "**/*.g.dart": true
     },
     "editor.rulers": [],
     "dart.lineLength": 2000,

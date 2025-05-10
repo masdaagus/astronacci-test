@@ -39,13 +39,13 @@ class LoginBody extends StatelessWidget {
           physics: const BouncingScrollPhysics(),
           child: Form(
             key: form,
-            child: BlocBuilder<LoginLoaderCubit, LoginLoaderState>(
-              // listener: (context, state) {
-              //   state.failure.fold(
-              //     () {},
-              //     (data) {},
-              //   );
-              // },
+            child: BlocConsumer<LoginLoaderCubit, LoginLoaderState>(
+              listener: (context, state) {
+                state.failure.fold(
+                  () {},
+                  (data) {},
+                );
+              },
               builder: (context, state) {
                 return Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
@@ -68,9 +68,9 @@ class LoginBody extends StatelessWidget {
                     CustomFormField(
                       label: 'Kata sandi',
                       hint: 'Password',
-                      initialValue: 'michaelwpass',
                       isPassword: true,
                       maxLine: 1,
+                      initialValue: 'michaelwpass',
                       onChanged: (val) => context.read<LoginLoaderCubit>().passwordChanged(val),
                       validator: (val) {
                         if (val!.isEmpty) {
@@ -84,8 +84,11 @@ class LoginBody extends StatelessWidget {
                     InkWell(
                       onTap: () {
                         if (form.currentState!.validate() && !state.isLoading) {
-                          log('validated');
-                          context.router.push(const UsersRoute());
+                          context.read<LoginLoaderCubit>().login().then((res) {
+                            if (res != null) {
+                              context.router.push(const UsersRoute());
+                            }
+                          });
                         }
                       },
                       child: Container(

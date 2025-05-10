@@ -8,8 +8,6 @@
 // coverage:ignore-file
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
-import 'package:astronacci_test/application/forget_password/forget_password_loader_cubit.dart'
-    as _i446;
 import 'package:astronacci_test/application/login/login_loader_cubit.dart'
     as _i895;
 import 'package:astronacci_test/application/register/register_loader_cubit.dart'
@@ -60,8 +58,6 @@ extension GetItInjectableX on _i174.GetIt {
       () => sharedPreferencesDi.prefs,
       preResolve: true,
     );
-    gh.factory<_i446.ForgetPasswordLoaderCubit>(
-        () => _i446.ForgetPasswordLoaderCubit());
     gh.factory<_i173.RegisterLoaderCubit>(() => _i173.RegisterLoaderCubit());
     gh.lazySingleton<_i361.Dio>(() => dioDi.dio);
     gh.lazySingleton<_i895.Connectivity>(() => connectivityDi.connectivity);

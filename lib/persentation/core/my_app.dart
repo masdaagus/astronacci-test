@@ -2,9 +2,6 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 import '../routes/app_router.dart';
 import 'styles/colors.dart';
-import 'package:astronacci_test/injection.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import '../../application/login/login_loader_cubit.dart';
 
 class MyApp extends StatelessWidget {
   MyApp({super.key});

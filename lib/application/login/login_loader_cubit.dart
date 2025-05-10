@@ -35,6 +35,5 @@ class LoginLoaderCubit extends Cubit<LoginLoaderState> {
         },
       );
     }
-    return null;
   }
 }

@@ -7,7 +7,7 @@ import 'persentation/core/my_app.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await configureDependencies(Environment.dev);
   await initializeDateFormatting();
-  configureDependencies(Environment.dev);
   runApp(MyApp());
 }

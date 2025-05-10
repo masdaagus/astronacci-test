@@ -4,10 +4,10 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../application/forget_password/forget_password_loader_cubit.dart';
-import '../../../injection.dart';
 import '../../core/button/custom_button.dart';
 import '../../core/components/custom_form_field.dart';
 import '../../core/styles/typography.dart';
+import '../../routes/app_router.dart';
 
 @RoutePage()
 class ForgetPasswordPage extends StatelessWidget {
@@ -17,13 +17,14 @@ class ForgetPasswordPage extends StatelessWidget {
   Widget build(BuildContext context) {
     log('in ForgetPassword');
     return BlocProvider(
-      create: (context) => getIt<ForgetPasswordLoaderCubit>(),
-      child: const Scaffold(
-        body: ForgetPasswordBody(),
+      create: (context) => ForgetPasswordLoaderCubit(),
+      child: Scaffold(
+        body: const ForgetPasswordBody(),
         bottomSheet: Padding(
-          padding: EdgeInsets.all(24),
+          padding: const EdgeInsets.all(24),
           child: CustomButton(
             title: 'Submit',
+            onTap: () => context.router.push(const LoginRoute()),
           ),
         ),
       ),

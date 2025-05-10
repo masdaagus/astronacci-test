@@ -14,7 +14,6 @@ part 'user_loader_cubit.freezed.dart';
 class UserLoaderCubit extends Cubit<UserLoaderState> {
   final IUserFacade userFacade;
 
-  // UserLoaderCubit() : super(UserLoaderState.initial());
   UserLoaderCubit(this.userFacade) : super(UserLoaderState.initial());
 
   void loadUsers() async {

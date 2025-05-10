@@ -53,7 +53,6 @@ class UsersBody extends StatelessWidget {
 
                 return Container(
                   margin: const EdgeInsets.symmetric(vertical: 6, horizontal: 12),
-                  // padding: const EdgeInsets.all(12),
                   width: double.infinity,
                   decoration: BoxDecoration(
                     color: white,
