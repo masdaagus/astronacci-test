@@ -1,0 +1,20 @@
+{
+    "window.zoomLevel": -0.4,
+    "editor.fontSize": 11.5,
+    "editor.guides.bracketPairs": true,
+    "workbench.colorCustomizations": {
+      "list.warningForeground": "#9ea5b3f8",
+    },
+    "files.exclude": {
+      "**/*.freezed.dart": false,
+      "**/objectbox-model.json": false,
+      "**/*.g.dart": false
+    },
+    "editor.rulers": [],
+    "dart.lineLength": 2000,
+    "[dart]": {
+      "editor.rulers": []
+    },
+    "editor.bracketPairColorization.enabled": true,
+    // "dart.runPubGetOnPubspecChanges": "never"
+}
